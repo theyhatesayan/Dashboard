@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayan Dashboard</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="query.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <div id="loader">Loading...</div>
+
+    <div class="dashboard">
+      <div class="overlay" onclick="closeSidebar()"></div>
+
+      <aside class="sidebar">
+        <div>
+          <h2 data-aos="fade-right">Ayan Mansuri</h2>
+
+          <nav>
+            <ul>
+              <li class="active" data-aos="fade-right">Dashboard</li>
+              <li data-aos="fade-right">Analytics</li>
+              <li data-aos="fade-right">Users</li>
+              <li data-aos="fade-right">Projects</li>
+              <li data-aos="fade-right">Settings</li>
+            </ul>
+          </nav>
+        </div>
+
+        <p class="footer">©2026 Ayan</p>
+      </aside>
+
+      <header>
+        <h1 data-aos="fade-down">Ayan Dashboard</h1>
+
+        <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+        <div class="header-right">
+          <input
+            class="search"
+            type="search"
+            placeholder="Search..."
+            data-aos="fade-down"
+          />
+          <span>🔔</span>
+          <span>👤</span>
+          <button onclick="toggleTheme()">🌙</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="cards">
+          <div class="card" data-aos="fade-up">
+            <small>Revenue</small>
+            <h2>$12,345</h2>
+            <p class="trend up">+12%</p>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <small>Users</small>
+            <h2>1,240</h2>
+            <p class="trend up">+8%</p>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <small>Orders</small>
+            <h2>320</h2>
+            <p class="trend down">-3%</p>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <small>Conversion</small>
+            <h2>3.2%</h2>
+            <p class="trend up">+1%</p>
+          </div>
+        </section>
+
+        <section class="chart" data-aos="fade-up">
+          <h3>Monthly Revenue</h3>
+          <button onclick="updateChart()">Update</button>
+          <canvas id="chart"></canvas>
+        </section>
+
+        <section class="table" data-aos="fade-up">
+          <h3>Recent Orders</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody id="tableBody">
+              <tr>
+                <td>John</td>
+                <td>john@mail.com</td>
+                <td><span class="status success">Done</span></td>
+              </tr>
+
+              <tr>
+                <td>Ali</td>
+                <td>ali@mail.com</td>
+                <td><span class="status pending">Pending</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+
+      <aside class="activity">
+        <h3 data-aos="fade-left">Activity</h3>
+
+        <div class="activity-item" data-aos="fade-left">User joined</div>
+        <div class="activity-item" data-aos="fade-left">Payment received</div>
+        <div class="activity-item" data-aos="fade-left">Project updated</div>
+        <div class="activity-item" data-aos="fade-left">Backup done</div>
+      </aside>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 700,
+        once: true,
+      });
+    </script>
+  </body>
+</html>
