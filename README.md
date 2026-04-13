@@ -44,7 +44,7 @@ It demonstrates skills like DOM manipulation, dynamic data updates, chart integr
   
 ## Live Demo
 
-https://frabjous-yeot-f37f3c.netlify.app/
+[https://frabjous-yeot-f37f3c.netlify.app/](https://dashboard-three-gamma-h8gjynyaky.vercel.app/)
 
 ## Future Improvements
 
